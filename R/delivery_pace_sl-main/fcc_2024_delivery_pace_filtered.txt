@@ -1,0 +1,7 @@
+
+
+Table: Kenema 2024 Filtered Data: Average Delivery Pace
+
+     mean     median         sd        iqr        p80        p90
+---------  ---------  ---------  ---------  ---------  ---------
+ 64.35335   65.01887   8.591351   12.84244   71.88499   73.77002

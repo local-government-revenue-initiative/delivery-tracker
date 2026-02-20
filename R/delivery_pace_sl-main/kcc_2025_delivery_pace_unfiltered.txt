@@ -1,0 +1,7 @@
+
+
+Table: Kenema 2025 Unfiltered Data: Average Delivery Pace
+
+     mean   median         sd        iqr    p80     p90
+---------  -------  ---------  ---------  -----  ------
+ 40.96111     41.1   9.171177   12.76555   48.5   51.55

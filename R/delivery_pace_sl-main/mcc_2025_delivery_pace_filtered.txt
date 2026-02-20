@@ -1,0 +1,7 @@
+
+
+Table: Makeni 2025 Filtered Data: Average Delivery Pace
+
+     mean     median         sd        iqr      p80       p90
+---------  ---------  ---------  ---------  -------  --------
+ 31.28377   32.60404   14.59348   22.80774   45.125   48.0984

@@ -1,0 +1,17 @@
+# Environment configurations
+.env
+.env.*
+!.env.example
+
+# OS generated files
+.DS_Store
+
+# Data/Log files
+*.csv
+*.xlsx
+*.log
+
+# Caches and local settings
+__pycache__/
+.Rhistory
+.RData

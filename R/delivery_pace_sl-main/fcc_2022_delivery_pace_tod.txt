@@ -1,0 +1,11 @@
+
+
+Table: Freetown 2022 Time of Day: Average Delivery Pace
+
+tod                            avg_daily_pace_tod
+----------------------------  -------------------
+06–08                                    7.452450
+09–11                                   21.812858
+12–14                                   24.932692
+15–17                                   19.081633
+Other (Night/Early Morning)              7.912371

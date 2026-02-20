@@ -1,0 +1,13 @@
+
+
+Table: Makeni 2025 Day of Week: Average Delivery Pace
+
+dow    avg_daily_pace_dow
+----  -------------------
+Sun              13.80000
+Mon              43.56977
+Tue              48.65823
+Wed              29.22078
+Thu              27.43624
+Fri              36.30097
+Sat              23.41333

@@ -1,0 +1,13 @@
+
+
+Table: Freetown 2022 Day of Week: Average Delivery Pace
+
+dow    avg_daily_pace_dow
+----  -------------------
+Sun              44.34783
+Mon              59.86288
+Tue              59.47584
+Wed              59.04893
+Thu              59.08125
+Fri              57.88015
+Sat              57.50000

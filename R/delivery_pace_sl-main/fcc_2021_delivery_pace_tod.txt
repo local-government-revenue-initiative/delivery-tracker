@@ -1,0 +1,11 @@
+
+
+Table: Freetown 2021 Time of Day: Average Delivery Pace
+
+tod                            avg_daily_pace_tod
+----------------------------  -------------------
+06–08                                    6.489960
+09–11                                   20.288254
+12–14                                   24.101117
+15–17                                   19.898426
+Other (Night/Early Morning)              8.225681

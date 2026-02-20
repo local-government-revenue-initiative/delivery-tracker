@@ -1,0 +1,11 @@
+
+
+Table: Kenema 2024 Time of Day: Average Delivery Pace
+
+tod                            avg_daily_pace_tod
+----------------------------  -------------------
+06–08                                    4.872483
+09–11                                   20.870544
+12–14                                   21.237792
+15–17                                   15.024540
+Other (Night/Early Morning)              4.725000

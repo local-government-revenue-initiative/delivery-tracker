@@ -1,0 +1,7 @@
+
+
+Table: Freetown 2023 Filtered Data: Average Delivery Pace
+
+     mean     median         sd        iqr        p80        p90
+---------  ---------  ---------  ---------  ---------  ---------
+ 59.07679   61.30508   12.46095   17.69152   71.05338   72.56355

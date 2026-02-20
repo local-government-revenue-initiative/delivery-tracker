@@ -1,0 +1,7 @@
+
+
+Table: Kenema 2024 Unfiltered vs. Filtered Data: Average Delivery Pace
+
+ unfiltered_mean   filtered_mean   diff_percent
+----------------  --------------  -------------
+        39.19937        38.83179      0.9377282

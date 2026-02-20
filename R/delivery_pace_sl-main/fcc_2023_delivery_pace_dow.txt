@@ -1,0 +1,13 @@
+
+
+Table: Freetown 2023 Day of Week: Average Delivery Pace
+
+dow    avg_daily_pace_dow
+----  -------------------
+Sun              41.60000
+Mon              68.97091
+Tue              67.37455
+Wed              68.20779
+Thu              63.59483
+Fri              65.79600
+Sat              67.54417

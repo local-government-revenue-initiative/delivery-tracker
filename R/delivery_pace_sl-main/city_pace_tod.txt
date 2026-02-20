@@ -1,0 +1,21 @@
+
+
+Table: Average Delivery Pace by Time of Day Across All Cities and Years
+
+city       tod                            city_avg_pace_tod   years_count    min_pace    max_pace
+---------  ----------------------------  ------------------  ------------  ----------  ----------
+Freetown   06–08                                   7.157894             5    6.489960    8.673077
+Freetown   09–11                                  24.452797             5   20.288254   27.291362
+Freetown   12–14                                  27.533980             5   24.101117   30.880000
+Freetown   15–17                                  22.050058             5   19.081633   23.850816
+Freetown   Other (Night/Early Morning)            10.103870             5    7.912371   13.942529
+Kenema     06–08                                   5.421956             2    4.872483    5.971429
+Kenema     09–11                                  19.435272             2   18.000000   20.870544
+Kenema     12–14                                  20.895546             2   20.553300   21.237792
+Kenema     15–17                                  14.869229             2   14.713918   15.024540
+Kenema     Other (Night/Early Morning)             5.721875             2    4.725000    6.718750
+Makeni     06–08                                   5.911765             1    5.911765    5.911765
+Makeni     09–11                                  14.941176             1   14.941176   14.941176
+Makeni     12–14                                  18.392157             1   18.392157   18.392157
+Makeni     15–17                                  12.893688             1   12.893688   12.893688
+Makeni     Other (Night/Early Morning)             4.969697             1    4.969697    4.969697

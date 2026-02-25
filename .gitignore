@@ -7,7 +7,6 @@
 .DS_Store
 
 # Data/Log files
-*.csv
 *.xlsx
 *.log
 

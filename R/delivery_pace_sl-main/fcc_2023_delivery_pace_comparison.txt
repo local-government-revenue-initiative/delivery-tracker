@@ -1,7 +1,0 @@
-
-
-Table: Freetown 2023 Unfiltered vs. Filtered Data: Average Delivery Pace
-
- unfiltered_mean   filtered_mean   diff_percent
-----------------  --------------  -------------
-        62.06942        59.07679       4.821409

@@ -1,7 +1,0 @@
-
-
-Table: Makeni 2025 Unfiltered vs. Filtered Data: Average Delivery Pace
-
- unfiltered_mean   filtered_mean   diff_percent
-----------------  --------------  -------------
-        31.67587        31.28377       1.237841

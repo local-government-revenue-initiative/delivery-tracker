@@ -1,7 +1,0 @@
-
-
-Table: Freetown 2022 Filtered Data: Average Delivery Pace
-
-     mean   median         sd        iqr     p80        p90
----------  -------  ---------  ---------  ------  ---------
- 51.03627    55.42   10.64729   13.39308   59.42   61.04218

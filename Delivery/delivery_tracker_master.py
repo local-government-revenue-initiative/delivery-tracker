@@ -32,8 +32,8 @@ USER_PATHS = {
     'Ibrahim': r'C:\Users\ibrah\Dropbox',
     'Evan': r'C:\Users\edtro\LoGRI Dropbox',
     'Zoe' : r'D:\Dropbox',
-    'Gilbert': r'/Users/darlington/Library/CloudStorage/Dropbox'
-    # Add your Dropbox root path here
+    'Gilbert': r'/Users/darlington/Documents/Delivery Tracker'
+    # Add your path here
 }
 
 # ============================================================================
@@ -80,8 +80,12 @@ COMMON_PATH = r'LoGRI Master Folder\2. Projects\2. Country Projects\9. Sierra Le
 # Build complete base path
 BASE_PATH = os.path.join(USER_ROOT_PATH, COMMON_PATH)
 
-# Paths (Ibrahim has a different folder structure)
-if CURRENT_USER in ('Ibrahim', 'Gilbert'):
+# Paths (Ibrahim has a different folder structure, Gilbert uses local project structure)
+if CURRENT_USER == 'Gilbert':
+    CODE_PATH     = os.path.join(USER_ROOT_PATH, 'Delivery')
+    RAW_DATA_PATH = os.path.join(USER_ROOT_PATH, CITY)
+    OUTPUT_PATH   = os.path.join(USER_ROOT_PATH, 'Output', CITY)
+elif CURRENT_USER == 'Ibrahim':
     CODE_PATH     = os.path.join(USER_ROOT_PATH, '11. Code/Python/2. Delivery')
     RAW_DATA_PATH = os.path.join(USER_ROOT_PATH, CITY)
     OUTPUT_PATH   = os.path.join(USER_ROOT_PATH, '13. Output/delivery_tracker', CITY)

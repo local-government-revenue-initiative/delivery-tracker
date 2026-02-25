@@ -82,9 +82,9 @@ BASE_PATH = os.path.join(USER_ROOT_PATH, COMMON_PATH)
 
 # Paths (Ibrahim has a different folder structure, Gilbert uses local project structure)
 if CURRENT_USER == 'Gilbert':
-    CODE_PATH     = os.path.join(USER_ROOT_PATH, 'Delivery')
-    RAW_DATA_PATH = os.path.join(USER_ROOT_PATH, CITY)
-    OUTPUT_PATH   = os.path.join(USER_ROOT_PATH, 'Output', CITY)
+    CODE_PATH     = os.path.join(USER_ROOT_PATH, 'code')
+    RAW_DATA_PATH = os.path.join(USER_ROOT_PATH, 'data', CITY)
+    OUTPUT_PATH   = os.path.join(USER_ROOT_PATH, 'output', 'delivery_tracker', CITY)
 elif CURRENT_USER == 'Ibrahim':
     CODE_PATH     = os.path.join(USER_ROOT_PATH, '11. Code/Python/2. Delivery')
     RAW_DATA_PATH = os.path.join(USER_ROOT_PATH, CITY)

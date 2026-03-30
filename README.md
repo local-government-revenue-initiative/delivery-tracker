@@ -1,6 +1,6 @@
 # Delivery Data Review Toolbox 📦
 
-This repository provides an automated solution for quality control and productivity monitoring of field delivery operations. It generates both an **interactive HTML interface** for anomaly filtering and **individual PDF reports** for field agents.
+This repository provides an automated solution for quality control and productivity monitoring of field delivery operations. It generates both an **interactive HTML interface** for anomaly filtering and statistics by team/date as well as **individual detailed PDF reports** for field agents.
 
 ## 🚀 Getting Started
 
@@ -11,13 +11,13 @@ To update the tracking data and generate new reports, follow these steps:
    * Download the raw data in **CSV** format.
    * Place the downloaded file into the `data/[CITY]/` folder of your local repository (replace `[CITY]` with the relevant city name).
 
-2. **Execution in Spyder:**
+2. **Execution in Python:**
    * Open the `delivery_tracker_master.py` script.
    * **Required:** Modify **Line 23** to specify the target city (e.g., `CITY = "Freetown"`).
    * Run the script.
 
 3. **Reviewing Results:**
-   * **Interactive Interface:** Open the generated `.html` file at the root of the directory to filter observations by date or team.
+   * **Interactive Interface:** Open the generated `.html` file at the root of the directory to filter observations by date and/or team.
    * **Individual Reports:** Navigate to the `stats_enum/` folder to find detailed PDF performance sheets for each agent.
 
 ---
@@ -35,7 +35,7 @@ The system flags observations with the following issues:
 
 ### 2. Productivity Monitoring
 The script identifies potential field difficulties based on predefined thresholds:
-* **Volume:** Total daily deliveries outside the expected range (**50 to 80**).
+* **Volume:** Total daily deliveries outside the expected range (**City Specific: Freetown = 50-90**).
 * **Pace:** An average gap between deliveries exceeding **15 minutes**.
 * **Breaks:** Any inactivity period longer than **1 hour and 30 minutes** between consecutive deliveries.
 

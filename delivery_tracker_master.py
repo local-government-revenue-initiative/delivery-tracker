@@ -16,27 +16,6 @@ from datetime import datetime
 import glob
 
 # ============================================================================
-# USER CONFIGURATION
-# ============================================================================
-
-# SELECT YOUR NAME - Each user changes only this line
-CURRENT_USER = 'Robin'  # Change to your name when you use the script
-
-if CURRENT_USER == 'Ibrahim':
-    sys.stdout.reconfigure(encoding='utf-8')
-    
-# User-specific Dropbox root paths
-USER_PATHS = {
-    'Robin': r'D:\LoGRI Dropbox',
-    'Lorena': r'C:\Users\Loren\LoGRI Dropbox',
-    'Ibrahim': r'C:\Users\ibrah\Dropbox',
-    'Evan': r'C:\Users\edtro\LoGRI Dropbox',
-    'Zoe' : r'D:\Dropbox',
-    'Gilbert': r'/Users/darlington/Library/CloudStorage/Dropbox'
-    # Add your Dropbox root path here
-}
-
-# ============================================================================
 # CONFIGURATION - CITY SELECTION
 # ============================================================================
 
@@ -60,35 +39,21 @@ PRODUCTIVITY_THRESHOLDS = {
 MAX_MEAN_GAP = 15  # minutes
 
 # ============================================================================
-# CONFIGURATION - PATHS (AUTOMATIC)
+# CONFIGURATION - PATHS (RELATIVE TO REPO ROOT)
 # ============================================================================
 
-# Get user's root path
-if CURRENT_USER not in USER_PATHS:
-    print(f"ERROR: User '{CURRENT_USER}' not found in USER_PATHS dictionary.")
-    print(f"Available users: {', '.join(USER_PATHS.keys())}")
-    print("\nPlease either:")
-    print("1. Change CURRENT_USER to match an existing user, or")
-    print("2. Add your name and path to the USER_PATHS dictionary")
-    sys.exit(1)
+# All paths are relative to the repository root
+# Expected repo structure:
+#   repo/
+#   ├── delivery_tracker_master.py
+#   ├── delivery_tracker_toolbox.py
+#   ├── data/{CITY}/          <- raw CSV exports
+#   └── tracker/{CITY}/       <- generated outputs
 
-USER_ROOT_PATH = USER_PATHS[CURRENT_USER]
+REPO_ROOT = os.path.dirname(os.path.abspath(__file__))
 
-# Common path structure (same for everyone)
-COMMON_PATH = r'LoGRI Master Folder\2. Projects\2. Country Projects\9. Sierra Leone'
-
-# Build complete base path
-BASE_PATH = os.path.join(USER_ROOT_PATH, COMMON_PATH)
-
-# Paths (Ibrahim has a different folder structure)
-if CURRENT_USER in ('Ibrahim', 'Gilbert'):
-    CODE_PATH     = os.path.join(USER_ROOT_PATH, '11. Code/Python/2. Delivery')
-    RAW_DATA_PATH = os.path.join(USER_ROOT_PATH, CITY)
-    OUTPUT_PATH   = os.path.join(USER_ROOT_PATH, '13. Output/delivery_tracker', CITY)
-else:
-    CODE_PATH     = os.path.join(BASE_PATH, r'11. Code\Python\2. Delivery')
-    RAW_DATA_PATH = os.path.join(BASE_PATH, r'12. Data\1. Raw\delivery_tracker', CITY)
-    OUTPUT_PATH   = os.path.join(BASE_PATH, r'13. Output\delivery_tracker', CITY)
+RAW_DATA_PATH = os.path.join(REPO_ROOT, 'data', CITY)
+OUTPUT_PATH   = os.path.join(REPO_ROOT, 'tracker', CITY)
 
 # ============================================================================
 # HELPER FUNCTIONS
@@ -139,9 +104,8 @@ def check_prerequisites():
     print("Checking prerequisites...")
     
     # Display current configuration
-    print(f"\nCurrent user: {CURRENT_USER}")
-    print(f"User root path: {USER_ROOT_PATH}")
-    print(f"Selected city: {CITY}")
+    print(f"\nSelected city: {CITY}")
+    print(f"Repo root: {REPO_ROOT}")
     
     # Display selected RAW file info
     if INPUT_FILE:
@@ -175,10 +139,7 @@ def run_toolbox_generation():
             print(f"WARNING: No productivity thresholds defined for {CITY}, using defaults")
             thresholds = {'min_deliveries': 50, 'max_deliveries': 80}
         
-        # Add code directory to Python path
-        sys.path.insert(0, CODE_PATH)
-        
-        # Import and run the toolbox script
+        # Import and run the toolbox script (same directory)
         import delivery_tracker_toolbox
         delivery_tracker_toolbox.run_toolbox(
             INPUT_FILE,         # Raw data only
@@ -205,7 +166,6 @@ def main():
     print("DELIVERY TRACKER - SIMPLIFIED PIPELINE")
     print("="*70)
     print(f"Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    print(f"User: {CURRENT_USER}")
     print(f"City: {CITY}")
     print("="*70)
     
